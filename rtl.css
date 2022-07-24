@@ -1,0 +1,51 @@
+/*
+Theme Name: WP Coupon Mate Pro
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.fleft {
+	float: right;
+}
+
+.fright {
+	float: left;
+}
+
+
+/*coupon style*/
+.store-listing-item .store-thumb-link {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0;
+}
+.store-listing-item .coupon-detail {
+	float: left;
+}
+
+.store-listing-item .latest-coupon {
+	float: right;
+	margin-right: 0px;
+}
+
+@media screen and (max-width: 790px) {
+	.store-listing-item .latest-coupon {
+		float: none;
+	}
+}
+
+/*Category page and home ctegory*/
+.widget_wpc_categories_grid_view .cate-parent{
+	padding-right: 0px;
+}
